@@ -1,0 +1,139 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1757772909062
+  modified: 1757772909062
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_f252aec4e6e14b6eaac7781fe7ae8f95
+      created: 1760195294385
+      modified: 1760195424756
+      sortKey: -1760195294385
+      description: ""
+    children:
+      - url: localhost:8081/
+        name: Consultar Produtos
+        meta:
+          id: req_14120c8af7c04baa9b2030dd75c351f6
+          created: 1760195316465
+          modified: 1760203658934
+          isPrivate: false
+          description: ""
+          sortKey: -1760195316465
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Criar Produtos
+        meta:
+          id: req_ebe2ec0203ec4882a04ee33f8909bcb7
+          created: 1760195427644
+          modified: 1760195604684
+          isPrivate: false
+          description: ""
+          sortKey: -1760195427644
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeProduto": "Rúcula",
+            	"precoProduto": 7
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_726ead75dc0141ebb3d753a61fb1628d
+      created: 1760205032668
+      modified: 1760205032668
+      sortKey: -1760205032668
+      description: ""
+    children:
+      - url: localhost:8081/clientes
+        name: Consultar Clientes
+        meta:
+          id: req_b8a3d2b8f46d4cf5b86f7938337bda44
+          created: 1760205039974
+          modified: 1760205128006
+          isPrivate: false
+          description: ""
+          sortKey: -1760205039974
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: Criar Clientes
+        meta:
+          id: req_4324fc7e55af43a2b85e4d4e0d35a8e4
+          created: 1760205068574
+          modified: 1760208260185
+          isPrivate: false
+          description: ""
+          sortKey: -1760205068574
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                    "nomeCliente": "Patrick",
+                    "cpfCliente": "100.100.100-10"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1757773052647
+    modified: 1757773052647
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1757773052441
+    modified: 1757773052441
+    isPrivate: false
