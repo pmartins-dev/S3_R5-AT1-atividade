@@ -2,24 +2,24 @@ type: collection.insomnia.rest/5.0
 name: Scratch Pad
 meta:
   id: wrk_scratchpad
-  created: 1757772909062
-  modified: 1757772909062
+  created: 1757186678257
+  modified: 1757186678257
   description: ""
 collection:
   - name: Produtos
     meta:
-      id: fld_f252aec4e6e14b6eaac7781fe7ae8f95
+      id: fld_699ebee1bdb04cd180d4129623a2b1f9
       created: 1760195294385
       modified: 1760195424756
       sortKey: -1760195294385
       description: ""
     children:
-      - url: localhost:8081/
+      - url: localhost:8081/produtos
         name: Consultar Produtos
         meta:
-          id: req_14120c8af7c04baa9b2030dd75c351f6
+          id: req_552675c291de40de92995c7ca852489e
           created: 1760195316465
-          modified: 1760203658934
+          modified: 1762000933039
           isPrivate: false
           description: ""
           sortKey: -1760195316465
@@ -38,9 +38,9 @@ collection:
       - url: localhost:8081/produtos
         name: Criar Produtos
         meta:
-          id: req_ebe2ec0203ec4882a04ee33f8909bcb7
+          id: req_c40554b098064829af3238b3a590d639
           created: 1760195427644
-          modified: 1760195604684
+          modified: 1762006191516
           isPrivate: false
           description: ""
           sortKey: -1760195427644
@@ -49,8 +49,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"nomeProduto": "Rúcula",
-            	"precoProduto": 7
+            	"nomeProduto": "Melancia",
+            	"precoProduto": 30
             }
         headers:
           - name: Content-Type
@@ -65,9 +65,59 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: localhost:8081/produtos/A535839F-6B00-4DB5-9700-AB9D93FAED34
+        name: Atualizar Produtos
+        meta:
+          id: req_78c262189a204b979f6896d05f639c5b
+          created: 1762000854436
+          modified: 1762006224635
+          isPrivate: false
+          description: ""
+          sortKey: -1762000854436
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "precoProduto": 25
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/2C1BA61E-4937-419C-9EF2-B24F9C13538B
+        name: Deletar Produtos
+        meta:
+          id: req_d7bb3bd7c7c44e1a904f58f0914fe066
+          created: 1762005828252
+          modified: 1762005973478
+          isPrivate: false
+          description: ""
+          sortKey: -1762005828252
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
   - name: Clientes
     meta:
-      id: fld_726ead75dc0141ebb3d753a61fb1628d
+      id: fld_50d97c7c58af43009c99c0d7bcca4f1e
       created: 1760205032668
       modified: 1760205032668
       sortKey: -1760205032668
@@ -76,7 +126,7 @@ collection:
       - url: localhost:8081/clientes
         name: Consultar Clientes
         meta:
-          id: req_b8a3d2b8f46d4cf5b86f7938337bda44
+          id: req_973b556c394d4d8bbf168a564e8b7480
           created: 1760205039974
           modified: 1760205128006
           isPrivate: false
@@ -97,9 +147,9 @@ collection:
       - url: localhost:8081/clientes
         name: Criar Clientes
         meta:
-          id: req_4324fc7e55af43a2b85e4d4e0d35a8e4
+          id: req_7722eaa7fc3c4d0c8acb6d5189290012
           created: 1760205068574
-          modified: 1760208260185
+          modified: 1762019483970
           isPrivate: false
           description: ""
           sortKey: -1760205068574
@@ -108,8 +158,10 @@ collection:
           mimeType: application/json
           text: |-
             {
-                    "nomeCliente": "Patrick",
-                    "cpfCliente": "100.100.100-10"
+              "nomeCliente": "Patrick",
+            	"cpfCliente": "100.100.100-10",
+            	"emailCliente": "patrick@email.com",
+            	"senhaCliente": "123456789"	
             }
         headers:
           - name: Content-Type
@@ -124,16 +176,23 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: biblioteca
+    meta:
+      id: fld_cbdbe2c63a194db4811980ab18937f62
+      created: 1761397924765
+      modified: 1761397924765
+      sortKey: -1761397924765
+      description: ""
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1757773052647
-    modified: 1757773052647
+    created: 1761396546390
+    modified: 1761396546390
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1757773052441
-    modified: 1757773052441
+    created: 1761396546382
+    modified: 1761396546382
     isPrivate: false
