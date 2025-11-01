@@ -66,7 +66,7 @@ const produtoModel={
                 UPDATE Produtos
                 SET nomeProduto = @nomeProduto,
                     precoProduto = @precoProduto
-                WHERE idProduto = @idProduto //NUNCA FAZER UM UPDATE SEM WHERE
+                WHERE idProduto = @idProduto 
             `
             await pool.request()
                 .input('nomeProduto', sql.VarChar(100), nomeProduto)

@@ -8,7 +8,7 @@ router.get('/produtos', produtoController.listarProdutos);
 // POST /produtos -> Cria um novo produto
 router.post('/produtos', produtoController.criarProduto);
 
-router.put('produtos/:idProduto', produtoController.atualizarProduto);
+router.put('/produtos/:idProduto', produtoController.atualizarProduto);
 
 
 
